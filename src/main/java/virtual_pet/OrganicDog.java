@@ -57,6 +57,6 @@ public class OrganicDog extends OrganicPet{
     @Override
     public String status() {
 
-        return name + " status: " + hunger + "/100, " + exhaustion + "/100, " + hygiene + "/100.";
+        return name + " status: hunger " + hunger + "/100, exhaustion " + exhaustion + "/100, hygiene " + hygiene + "/100.";
     }
 }

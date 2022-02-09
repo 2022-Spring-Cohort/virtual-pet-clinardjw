@@ -39,6 +39,6 @@ public class RoboticDog extends RoboticPet{
     @Override
     public String status() {
 
-        return name + " status: " + fuel + "/100, " + wear + "/100.";
+        return name + " status: fuel " + fuel + "/100, wear " + wear + "/100.";
     }
 }

@@ -44,7 +44,7 @@ public class VirtualPetApplication {
         System.out.println(activePet.status());
         Scanner userInput = new Scanner(System.in);
         while (true) {
-            System.out.println("To feed/fuel your pet, press '1'. To rest/do maintenance on your pet, press '2'. To clean your pet's living area, press '3'. To check the status of all pets, press '4'. To swap pets, press '5'. To quit, press '6'.");
+            System.out.println("To feed/fuel your pet, press '1'. To rest/do maintenance on your pet, press '2'. To clean your pet's living area, press '3'. To walk your pet, press '4'. To check the status of all pets, press '5'. To swap pets, press '6'. To quit, press '7'.");
             int action = userInput.nextInt();
             if (action == 1) {
                 if (activePet instanceof OrganicPet) {
@@ -65,13 +65,19 @@ public class VirtualPetApplication {
                 if (activePet instanceof RoboticPet)
                     System.out.println("Robotic pets do not require you to clean up after them!");
             } else if (action == 4) {
+                if (activePet instanceof OrganicDog) {
+                    ((OrganicDog) activePet).walk();
+                }else if (activePet instanceof  RoboticDog) {
+                    ((RoboticDog) activePet).walk();
+                }else System.out.println("Cats do not require you to walk them!");
+            } else if (action == 5) {
                 System.out.println(Finn.status());
                 System.out.println(Nina.status());
                 System.out.println(Piper.status());
                 System.out.println(Cali.status());
-            } else if (action == 5) {
-                petSelectMethod();
             } else if (action == 6) {
+                petSelectMethod();
+            } else if (action == 7) {
                 break;
             } else {
                 System.out.println("Please choose a valid input!");
