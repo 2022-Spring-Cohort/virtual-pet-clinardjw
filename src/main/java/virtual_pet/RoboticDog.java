@@ -1,8 +1,8 @@
 package virtual_pet;
 
 public class RoboticDog extends RoboticPet{
-    public RoboticDog(int fuel, int wear) {
-        super(fuel, wear);
+    public RoboticDog(String name, int fuel, int wear) {
+        super(name, fuel, wear);
     }
 
     @Override
@@ -21,7 +21,7 @@ public class RoboticDog extends RoboticPet{
             System.out.println("You initiate maintenance on your robotic pet. It seems good as new!");
             wear -= 75;
         } else {
-            System.out.println("Your robotic cat does not need maintenance currently.");
+            System.out.println("Your robotic dog does not need maintenance currently.");
         }
     }
 
@@ -32,7 +32,7 @@ public class RoboticDog extends RoboticPet{
             fuel -= 25;
         }
         else {
-            System.out.println("Your dog seems tired and does not want to walk. Try letting it rest first!");
+            System.out.println("Your dog seems too worn to walk. Try doing maintenance first!");
         }
     }
 

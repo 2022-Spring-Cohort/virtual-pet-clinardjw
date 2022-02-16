@@ -1,15 +1,16 @@
 package virtual_pet;
 
 public abstract class OrganicPet extends Pet{
+    protected String name;
     protected int hunger;
     protected int exhaustion;
     protected int hygiene;
 
-    public OrganicPet(int hunger, int exhaustion, int hygiene) {
-        super(name);
+    public OrganicPet(String name, int hunger, int exhaustion, int hygiene) {
         this.hunger = hunger;
         this.exhaustion = exhaustion;
         this.hygiene = hygiene;
+        this.name = name;
     }
 
 

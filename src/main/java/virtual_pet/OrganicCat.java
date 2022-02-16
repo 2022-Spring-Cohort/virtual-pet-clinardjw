@@ -1,10 +1,11 @@
 package virtual_pet;
 
 public class OrganicCat extends OrganicPet {
-
-    public OrganicCat(int hunger, int exhaustion, int hygiene) {
-        super(hunger, exhaustion, hygiene);
+    public OrganicCat(String name, int hunger, int exhaustion, int hygiene) {
+        super(name, hunger, exhaustion, hygiene);
     }
+
+
 
     @Override
     void feed() {

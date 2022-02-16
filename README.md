@@ -1,7 +1,7 @@
 # Required Tasks
 ## VirtualPet class
-- [ ] You will need to create a VirtualPet class.
-- [ ] Create at least three instance variables (aka attributes aka properties aka fields).
+- [x] You will need to create a VirtualPet class.
+- [x] Create at least three instance variables (aka attributes aka properties aka fields).
 - [ ] Create at least three methods (messages you send to your pet).
 - [ ] Create a tick() method that represents the passage of time.
 ## VirtualPetApp class
@@ -19,3 +19,4 @@ Pets are not robots - they usually have some sort of self-determination! When ti
 - [ ] Create a visual representation of your pet.
 
 Rather than using numbers to convey your pet’s status, you could have some sort of visual representation of the pet. I.e., instead of printing hunger: 50, you could use smileys or ASCII art to show hunger when hunger >= 50.
+

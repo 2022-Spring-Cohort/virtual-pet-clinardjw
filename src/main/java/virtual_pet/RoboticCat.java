@@ -1,10 +1,8 @@
 package virtual_pet;
 
 public class RoboticCat extends RoboticPet{
-
-
-    public RoboticCat(int fuel, int wear) {
-        super(fuel, wear);
+    public RoboticCat(String name, int fuel, int wear) {
+        super(name, fuel, wear);
     }
 
     @Override

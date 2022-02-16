@@ -5,12 +5,12 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class VirtualPetApplication {
-    Pet Finn = new OrganicDog(0, 0, 0);
-    Pet Nina = new RoboticDog(100, 0);
-    Pet Piper = new OrganicCat(0, 0, 100);
-    Pet Cali = new RoboticCat(100, 0);
+    OrganicDog Finn = new OrganicDog( "Finn", 0, 0,0);
+    RoboticDog Nina = new RoboticDog("Nina",100, 0);
+    OrganicCat Piper = new OrganicCat("Piper",0,0,100);
+    RoboticCat Cali = new RoboticCat("Cali",100, 0);
 
-    //arraylist to select pet upon launch
+//change to array-list
     Pet[] Pets = {Finn, Nina, Piper, Cali};
     Pet activePet = Pets[00];
 
@@ -44,7 +44,7 @@ public class VirtualPetApplication {
         System.out.println(activePet.status());
         Scanner userInput = new Scanner(System.in);
         while (true) {
-            System.out.println("To feed/fuel your pet, press '1'. To rest/do maintenance on your pet, press '2'. To clean your pet's living area, press '3'. To walk your pet, press '4'. To check the status of all pets, press '5'. To swap pets, press '6'. To quit, press '7'.");
+            System.out.println("To feed/fuel your pet, press '1'. To rest/do maintenance on your pet, press '2'. To clean your pet's living area, press '3'. To walk your pet, press '4'. \nTo check the status of all pets, press '5'. To swap pets, press '6'. To quit, press '7'.");
             int action = userInput.nextInt();
             if (action == 1) {
                 if (activePet instanceof OrganicPet) {
@@ -71,10 +71,12 @@ public class VirtualPetApplication {
                     ((RoboticDog) activePet).walk();
                 }else System.out.println("Cats do not require you to walk them!");
             } else if (action == 5) {
-                System.out.println(Finn.status());
-                System.out.println(Nina.status());
-                System.out.println(Piper.status());
-                System.out.println(Cali.status());
+                //for-each loop
+                //for each pet in array, print status
+               System.out.println(Finn.status());
+               System.out.println(Nina.status());
+               System.out.println(Piper.status());
+               System.out.println(Cali.status());
             } else if (action == 6) {
                 petSelectMethod();
             } else if (action == 7) {
